@@ -1,6 +1,7 @@
-# PJ RTMPose Pose Estimation Requirements
-onnxruntime>=1.19.2
+# PJ RTMPose Estimation Requirements
+# Pinned versions to avoid dependency conflicts in Colab
+onnxruntime-gpu==1.19.2
 ultralytics>=8.0.0
 opencv-python>=4.5.0
-numpy>=1.21.0
+numpy>=1.21.0,<2.3.0
 torch>=1.8.0
