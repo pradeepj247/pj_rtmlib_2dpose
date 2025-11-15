@@ -1,56 +1,48 @@
 # RTMPose 2D Pose Estimation on Google Colab
 
-Real-time 2D human pose estimation using RTMPose-M and YOLOv8 with GPU acceleration.
+**Complete all-in-one package** - Includes RTMLib source + ready-to-use pose estimation pipeline.
 
-## 🚀 Quick Start (Google Colab)
+## 🚀 One-Command Setup
+```bash
+git clone https://github.com/pradeepj247/pj_rtmlib_2dpose.git
+cd pj_rtmlib_2dpose
+bash setup_colab.sh
+```
 
-### 1. One-Click Setup
+## 📦 What's Included
+- ✅ **RTMLib source code** (full library - no external download needed)
+- ✅ **Pose estimation wrapper classes** (`pose_estimation.py`, `video_processor.py`)
+- ✅ **Video processing pipeline**
+- ✅ **Single image demo** (`examples/single_image_demo.py`)
+- ✅ **Complete setup scripts**
+
+No external dependencies needed during setup - everything is self-contained!
+
+## 🎯 Quick Start
 ```python
-!git clone https://github.com/YOUR_USERNAME/my-rtmpose-project.git
-%cd my-rtmpose-project
-!bash setup_colab.sh
-
-### 2. Run Single Image Demo
 from pose_estimation import PoseEstimator
-estimator = PoseEstimator()
-estimator.process_image("path/to/image.jpg")
 
-### 3. Run Video Processing
-from video_processor import VideoProcessor
-processor = VideoProcessor()
-processor.process_video("input.mp4", "output.mp4")
+# Initialize and use
+estimator = PoseEstimator(device=\"cuda\")
+result = estimator.process_image(\"rtmlib/demo.jpg\")
+```
 
-📊 Performance
+## 📊 Performance
+- **Detection + Pose**: ~39ms per frame
+- **Real-time**: ~25 FPS
+- **GPU**: Tesla T4 (Colab)
 
-Detection + Pose: ~39ms per frame
-
-Real-time: ~25 FPS
-
-GPU: Tesla T4 (Colab)
-
-🛠 Features
-Single image pose estimation
-
-Video processing with pose tracking
-
-Real-time performance
-
-Multiple person detection
-
-GPU acceleration
-
-📁 Project Structure
-text
-my-rtmpose-project/
+## 🛠 Project Structure
+```
+pj_rtmlib_2dpose/
+├── rtmlib/                 # Complete RTMLib source
+├── pose_estimation.py      # Core pose estimation class
+├── video_processor.py      # Video processing pipeline
 ├── setup_colab.sh          # One-click setup script
 ├── requirements.txt        # Python dependencies
-├── pose_estimation.py     # Core pose estimation
-├── video_processor.py     # Video processing
 └── examples/
-    ├── single_image_demo.py
-    └── video_demo.py
-🔧 Manual Setup
-See setup_colab.sh for detailed installation steps.
+    └── single_image_demo.py
+```
 
-📝 License
-MIT License
+## 📝 License
+Includes RTMLib under its original license.
