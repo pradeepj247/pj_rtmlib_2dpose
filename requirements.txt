@@ -1,7 +1,5 @@
-
-RTMPose Pose Estimation Requirements
-rtmlib @ git+https://github.com/Tau-J/rtmlib.git
-onnxruntime-gpu==1.19.2
+# PJ RTMPose Pose Estimation Requirements
+onnxruntime>=1.19.2
 ultralytics>=8.0.0
 opencv-python>=4.5.0
 numpy>=1.21.0

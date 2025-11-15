@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pj_rtmlib_2dpose"
+version = "0.1.0"
+description = "2D Pose Estimation Library using RTMPose"
+authors = [
+    {name = "pradeepj247"},
+]
+dependencies = [
+    "onnxruntime-gpu==1.19.2",
+    "ultralytics>=8.0.0",
+    "opencv-python>=4.5.0",
+    "numpy>=1.21.0",
+    "torch>=1.8.0",
+]
+requires-python = ">=3.7"

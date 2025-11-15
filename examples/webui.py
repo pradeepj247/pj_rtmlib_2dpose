@@ -71,7 +71,7 @@ with gr.Blocks() as demo:
 
         gr.Markdown('## Output')
         out_image = gr.Image(type='numpy')
-        gr.Examples(['./demo.jpg'], input_img)
+        gr.Examples(['data/demo/images/demo.jpg'], input_img)
 
         button.click(predict, [
             input_img, openpose_skeleton, model_type, black_bg, backend, device

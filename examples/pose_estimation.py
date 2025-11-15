@@ -6,7 +6,8 @@ Core pose estimation class for RTMPose + YOLOv8
 import cv2
 import numpy as np
 from ultralytics import YOLO
-from rtmlib.rtmlib import Body, draw_skeleton
+from rtmlib.tools.solution.body import Body
+from rtmlib.visualization.draw import draw_skeleton
 import time
 
 class PoseEstimator:
@@ -142,4 +143,4 @@ class PoseEstimator:
 # Example usage
 if __name__ == "__main__":
     estimator = PoseEstimator()
-    result = estimator.process_image("rtmlib/demo.jpg")
+    result = estimator.process_image("data/demo/images/demo.jpg")
