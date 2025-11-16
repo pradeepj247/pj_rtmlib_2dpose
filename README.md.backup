@@ -11,13 +11,6 @@ cd pj_rtmlib_2dpose
 bash setup_colab.sh
 ```
 
-**What this does:**
-- ✅ Resolves ONNX Runtime conflicts automatically
-- ✅ Installs all dependencies with compatible versions
-- ✅ Downloads and converts YOLOv8 model to ONNX format
-- ✅ Runs validation to ensure GPU acceleration is working
-- ✅ Organizes models in `models/` directory
-
 ### Option 2: Standard Python Package
 ```bash
 pip install git+https://github.com/pradeepj247/pj_rtmlib_2dpose.git
@@ -29,14 +22,6 @@ git clone https://github.com/pradeepj247/pj_rtmlib_2dpose.git
 cd pj_rtmlib_2dpose
 pip install -e .
 ```
-
-## 🔍 Verification
-After installation, run the validation script to ensure everything is working:
-```bash
-python validate_installation.py
-```
-
-**Expected output:** All checks should pass with ✅, including CUDA Execution Provider availability.
 
 ## 📦 What's Included
 ✅ RTMLib source code (full library — no external download needed)

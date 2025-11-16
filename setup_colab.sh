@@ -1,6 +1,13 @@
 #!/bin/bash
 echo "🚀 PJ RTMLib 2D Pose - Complete Setup (All-in-One)"
 
+echo "🔧 Step 0: Resolving ONNX Runtime conflicts..."
+echo "Removing any conflicting ONNX Runtime CPU version..."
+pip uninstall -y onnxruntime
+
+echo "Installing ONNX Runtime GPU version..."
+pip install onnxruntime-gpu==1.19.2
+
 echo "📦 Step 1: Installing package and dependencies..."
 pip install -e .
 
@@ -38,7 +45,10 @@ else:
         print(f'❌ Error during YOLOv8 setup: {e}')
 "
 
+echo "🔍 Step 4: Running installation validation..."
+python validate_installation.py
+
+echo ""
 echo "✅ Setup complete! Ready to use PJ RTMLib 2D Pose."
 echo "📁 Models are organized in: models/"
-
-
+echo "💡 If you encounter any issues, restart the runtime and run the validation script again."
