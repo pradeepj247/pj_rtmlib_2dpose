@@ -1,4 +1,4 @@
-# RTMPose 2D Pose Estimation on Google Colab
+# PJ 2D Pose Estimation on Google Colab
 
 **Complete all-in-one package** — Includes RTMLib source + ready-to-use pose estimation pipeline.
 
