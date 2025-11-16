@@ -6,8 +6,8 @@
 
 ### Option 1: One-Command Setup (Colab Recommended)
 ```bash
-git clone https://github.com/pradeepj247/pj_rtmlib_2dpose.git
-cd pj_rtmlib_2dpose
+git clone https://github.com/pradeepj247/pjpose2d.git
+cd pjpose2d
 bash setup_colab.sh
 ```
 
@@ -20,13 +20,13 @@ bash setup_colab.sh
 
 ### Option 2: Standard Python Package
 ```bash
-pip install git+https://github.com/pradeepj247/pj_rtmlib_2dpose.git
+pip install git+https://github.com/pradeepj247/pjpose2d.git
 ```
 
 ### Option 3: Development Install
 ```bash
-git clone https://github.com/pradeepj247/pj_rtmlib_2dpose.git
-cd pj_rtmlib_2dpose
+git clone https://github.com/pradeepj247/pjpose2d.git
+cd pjpose2d
 pip install -e .
 ```
 
@@ -63,7 +63,7 @@ result = estimator.process_image("data/demo/images/demo.jpg")
 
 ## 🛠 Project Structure
 ```
-pj_rtmlib_2dpose/
+pjpose2d/
 ├── data/             # Demo images & videos
 │   └── demo/
 │       ├── images/

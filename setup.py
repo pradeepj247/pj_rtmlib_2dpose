@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="pj_rtmlib_2dpose",
+    name="pjpose2d",
     version="0.1.0",
     description="2D Pose Estimation Library using RTMPose",
     author="pradeepj247",

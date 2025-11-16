@@ -1,6 +1,6 @@
 # validate_installation.py
 """
-PJ RTMLib 2D Pose - Installation Validation Script
+PJPose2D - Installation Validation Script
 Validates that all components are installed correctly and functioning.
 """
 
@@ -20,7 +20,7 @@ def get_onnxruntime_version():
         return "Unknown (error running pip show)"
 
 def validate_installation():
-    print("🔍 PJ RTMLib 2D Pose - Installation Validation")
+    print("🔍 PJPose2D - Installation Validation")
     print("=" * 50)
     
     # 1. Check Python version

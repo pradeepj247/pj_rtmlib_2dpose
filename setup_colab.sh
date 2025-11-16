@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "🚀 PJ RTMLib 2D Pose - Complete Setup (All-in-One)"
+echo "🚀 PJPose2D - Complete Setup (All-in-One)"
 
 echo "🔧 Step 0: Resolving ONNX Runtime conflicts..."
 echo "Removing any conflicting ONNX Runtime CPU version..."
@@ -49,6 +49,6 @@ echo "🔍 Step 4: Running installation validation..."
 python validate_installation.py
 
 echo ""
-echo "✅ Setup complete! Ready to use PJ RTMLib 2D Pose."
+echo "✅ Setup complete! Ready to use PJPose2D."
 echo "📁 Models are organized in: models/"
 echo "💡 If you encounter any issues, restart the runtime and run the validation script again."
