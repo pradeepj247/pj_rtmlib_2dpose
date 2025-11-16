@@ -1,5 +1,17 @@
 """
+import os
+import sys
+
+# Add the parent directory to Python path to import pjpose2d modules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 Pose Estimation - GPU Accelerated Version (Fixed)
+import os
+import sys
+
+# Add the parent directory to Python path to import pjpose2d modules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 """
 
 import cv2

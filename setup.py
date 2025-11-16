@@ -8,7 +8,7 @@ setup(
     author_email="",  # Add your email if you want
     packages=find_packages(),
     install_requires=[
-        "onnxruntime-gpu==1.19.2",
+        "onnxruntime-gpu==1.23.0",
         "ultralytics>=8.0.0",
         "opencv-python>=4.5.0", 
         "numpy>=1.21.0",

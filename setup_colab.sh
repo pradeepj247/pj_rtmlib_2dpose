@@ -6,7 +6,7 @@ echo "Removing any conflicting ONNX Runtime CPU version..."
 pip uninstall -y onnxruntime
 
 echo "Installing ONNX Runtime GPU version..."
-pip install onnxruntime-gpu==1.19.2
+pip install onnxruntime-gpu==1.23.0
 
 echo "📦 Step 1: Installing package and dependencies..."
 pip install -e .
