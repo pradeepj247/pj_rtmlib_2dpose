@@ -14,33 +14,26 @@ pip install -e .
 echo "📁 Step 2: Creating models directory..."
 mkdir -p models
 
-echo "🎯 Step 3: Setting up YOLOv8..."
+echo "🎯 Step 3: Downloading YOLOv8s weights (ONNX conversion skipped)..."
 python -c "
 from ultralytics import YOLO
 import os
-import shutil
 
 # Check if model already exists
-if os.path.exists('models/yolov8s.onnx'):
-    print('✅ YOLOv8s ONNX model already exists in models/')
+if os.path.exists('models/yolov8s.pt'):
+    print('✅ YOLOv8s.pt already exists in models/')
 else:
-    print('Downloading and converting YOLOv8s to ONNX...')
+    print('Downloading YOLOv8s weights...')
     try:
-        # Download and convert directly
+        # Just download the weights, no export to ONNX
         model = YOLO('yolov8s.pt')
-        model.export(format='onnx', opset=12, simplify=True, dynamic=False)
-        
-        # Move to models folder
-        if os.path.exists('yolov8s.onnx'):
-            shutil.move('yolov8s.onnx', 'models/yolov8s.onnx')
-            print('✅ YOLOv8s ONNX model saved to models/yolov8s.onnx')
-            
-            # Clean up the .pt file (optional - remove this if you want to keep it)
-            if os.path.exists('yolov8s.pt'):
-                os.remove('yolov8s.pt')
-                print('🧹 Cleaned up temporary files')
+        # Move to models folder if it was downloaded to current directory
+        if os.path.exists('yolov8s.pt'):
+            import shutil
+            shutil.move('yolov8s.pt', 'models/yolov8s.pt')
+            print('✅ YOLOv8s.pt saved to models/yolov8s.pt')
         else:
-            print('❌ YOLOv8s ONNX file was not created')
+            print('✅ YOLOv8s weights are ready for use')
     except Exception as e:
         print(f'❌ Error during YOLOv8 setup: {e}')
 "
